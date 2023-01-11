@@ -38,14 +38,10 @@ export default function Home() {
   };
 
   const handleMenuOne = () => {
-
-
     setOpen(false);
   };
 
   const handleMenuTwo = () => {
-
-
     setOpen(false);
   };
 
@@ -71,26 +67,25 @@ export default function Home() {
                   className="chevronDownIcon -mr-1 ml-2 h-5 w-5"
                   aria-hidden="true"
                 />
-                
               </div>
               {open ? (
-              <ul className="menu">
-                <li className="menu-item">
-                  <a href="#services">Services</a>
-                </li>
+                <ul className="menu">
+                  <li className="menu-item">
+                    <a href="#services">Services</a>
+                  </li>
 
-                <li className="menu-item">
-                  <a href="#portfolio">Projects</a>
-                </li>
-                <li className="menu-item">
-                  <a href="#contact">Contact me</a>
-                </li>
-              </ul>
-            ) : null}
+                  <li className="menu-item">
+                    <a href="#portfolio">Projects</a>
+                  </li>
+                  <li className="menu-item">
+                    <a href="#contact">Contact me</a>
+                  </li>
+                </ul>
+              ) : null}
             </div>
 
             <ul className="flex items-center">
-              <span className="bg-cyan-500 text- to-teal-500font-semibold mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 ">
+              <span id="updatebtn" className="bg-cyan-500 text- to-teal-500font-semibold mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 ">
                 This website is being updated weekly 😀!
               </span>
 
@@ -205,14 +200,14 @@ export default function Home() {
             </p>
           </div>
           <div className="imgWrapper mt-5 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ml-16">
+            <div className="basis-1/3 flex-1 ml-16 ">
               <Link
                 href="https://amazon-clone-react-marwane.netlify.app/"
                 target={"_blank"}
                 className="cursor-pointer"
               >
                 <Image
-                  className="col-start-1 col-end-2 rounded-lg object-cover transition-all hover:scale-110 duration-[0.5s]"
+                  className="col-start-1 ml-12 col-end-2 rounded-3xl object-cover transition-all hover:scale-110 duration-[0.5s] shadow-2xl"
                   width={300}
                   height={300}
                   layout="responsive"
@@ -228,9 +223,9 @@ export default function Home() {
                 className="cursor-pointer"
               >
                 <Image
-                  className="rounded-lg object-cover w-[60%] block ml-auto mr-auto pt-16 mb-8"
-                  width={"100%"}
-                  height={"100%"}
+                  className="rounded-3xl object-cover w-[60%] block ml-auto mr-auto pt-16 mb-8 "
+                  width={500}
+                  height={500}
                   layout="responsive"
                   src={weatherapp}
                   alt=""
@@ -245,9 +240,9 @@ export default function Home() {
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-lg object-cover"
-                    width={"100%"}
-                    height={"100%"}
+                    className="rounded-3xl object-cover"
+                    width={300}
+                    height={300}
                     layout="responsive"
                     src={piano}
                     alt=""
@@ -255,14 +250,14 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="row-start-2 row-end-3 col-start-1 col-end-2 mt-5  w-[100%] lg:flex-row lg:flex-wrap ">
+            <div className="row-start-2 row-end-3 col-start-1 col-end-2 mt-5  w-[100%] lg:flex-row lg:flex-wrap  ">
               <Link
                 href="https://quizz-react-appli.netlify.app/"
                 target={"_blank"}
                 className="cursor-pointer flex justify-center h-[100%] w-[100%]"
               >
                 <Image
-                  className="rounded-lg transition-all hover:scale-110 duration-[0.5s] h-72"
+                  className="rounded-3xl mt-10 transition-all hover:scale-110 duration-[0.5s] h-72 shadow-md "
                   width={300}
                   height={300}
                   layout="responsive"
@@ -272,16 +267,16 @@ export default function Home() {
               </Link>
             </div>
             <div className="col-start-1 col-end-2 flex items-center">
-              <div className="p-14 transition-all hover:scale-110 duration-[0.5s]">
+              <div className="p-14 transition-all hover:scale-110 duration-[0.5s] ">
                 <Link
                   href="https://caroussel-marwane.netlify.app"
                   target={"_blank"}
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-lg object-cover w-[80%]"
-                    width={"100%"}
-                    height={"100%"}
+                    className="rounded-3xl object-cover w-[80%] shadow-md "
+                    width={300}
+                    height={300}
                     layout="responsive"
                     src={carousel}
                     alt=""
@@ -289,17 +284,17 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-start-2 col-end-3 flex items-center">
-              <div className="p-14 transition-all hover:scale-110 duration-[0.5s]">
+            <div className="col-start-2 col-end-3 flex items-center ">
+              <div className="p-14 transition-all hover:scale-110 duration-[0.5s] ">
                 <Link
                   href="https://hangman-marwane.netlify.app"
                   target={"_blank"}
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-lg object-cover w-[80%]"
-                    width={"100%"}
-                    height={"100%"}
+                    className="rounded-3xl object-cover w-[80%] shadow-md"
+                    width={200}
+                    height={200}
                     layout="responsive"
                     src={hangman}
                     alt=""

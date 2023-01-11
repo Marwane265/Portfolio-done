@@ -24,7 +24,6 @@
   width: 100px;
   font-family: "Burtons";
   letter-spacing: 1px;
-  
 }
 #dropdownMenu1 {
   left: 30vw;
@@ -54,6 +53,16 @@
 .chevronDownIcon {
   background: none;
 }
+#myBtn {
+  position: sticky;
+  background-color: red;
+}
 .showTopBtn {
   display: none;
+}
+@media only screen and (max-width: 830px) {
+  #updatebtn {
+    background-color: lightblue;
+    display: none;
+  }
 }
