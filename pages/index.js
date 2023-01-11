@@ -91,6 +91,7 @@ export default function Home() {
 
               <li>
                 <BsFillMoonStarsFill
+                id="BsFillMoonStarsFill"
                   onClick={() => setDarkMode(!darkMode)}
                   className="transition-all hover:scale-125 duration-[0.5s] cursor-pointer text-2xl"
                 />

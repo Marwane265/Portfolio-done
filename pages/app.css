@@ -65,4 +65,9 @@
     background-color: lightblue;
     display: none;
   }
+  #BsFillMoonStarsFill {
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
 }
