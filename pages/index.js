@@ -1,16 +1,18 @@
 import Head from "next/head";
 import { AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { VscTriangleRight } from "react-icons/bs";
+import { AiFillCaretRight } from "react-icons/ai";
 import { useState } from "react";
 import code from "../public/code.png";
 import design from "../public/design.png";
 import Image from "next/image";
 import amazonclone from "../public/amazonclone2.jpg";
-import weatherapp from "../public/weather.svg";
-import piano from "../public/piano.png";
+import weatherapp from "../public/weer.png";
+import piano from "../public/pianoimg.png";
 import Quizz from "../public/Quizz.jpg";
 import carousel from "../public/carousel.png";
-import hangman from "../public/hangman.png";
+import hangman from "../public/hangman.jpg";
 import Link from "next/link";
 import ContactMe from "./ContactMe";
 import avatar from "../public/3d-avatar-done.png";
@@ -46,7 +48,9 @@ export default function Home() {
   };
 
   const [darkMode, setDarkMode] = useState(false);
-
+  const [isShownS, setIsShownS] = useState(false);
+  const [isShownC, setIsShownC] = useState(false);
+  const [isShownP, setIsShownP] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -56,11 +60,14 @@ export default function Home() {
       </Head>
       <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40 w-fitgit  ">
         <section className="min-h-screen" id="home">
-          <nav className="py-10 mb-12 flex justify-between dark:text-white">
+          <nav
+            id="nav"
+            className="py-10 mb-12 flex justify-between dark:text-white"
+          >
             <div>
               <h1 className="font-burtons text-xl">DevelopedByMarwane</h1>
 
-              <div className="tobottom" onClick={handleOpen}>
+              <div className="tobottom font-burtons" onClick={handleOpen}>
                 {console.log("open" + open)}
                 Dropdown Menu
                 <ChevronDownIcon
@@ -69,29 +76,65 @@ export default function Home() {
                 />
               </div>
               {open ? (
-                <ul className="menu">
+                <ul className="menu font-burtons">
                   <li className="menu-item">
-                    <a href="#services">Services</a>
+                    {isShownS && (
+                      <>
+                        <AiFillCaretRight />
+                      </>
+                    )}
+                    <a
+                      onMouseEnter={() => setIsShownS(true)}
+                      onMouseLeave={() => setIsShownS(false)}
+                      href="#services"
+                    >
+                      Services
+                    </a>
                   </li>
 
                   <li className="menu-item">
-                    <a href="#portfolio">Projects</a>
+                    {isShownP && (
+                      <>
+                        <AiFillCaretRight />
+                      </>
+                    )}
+                    <a
+                      onMouseEnter={() => setIsShownP(true)}
+                      onMouseLeave={() => setIsShownP(false)}
+                      href="#Portfolio"
+                    >
+                      Projects
+                    </a>
                   </li>
                   <li className="menu-item">
-                    <a href="#contact">Contact me</a>
+                    {isShownC && (
+                      <>
+                        <AiFillCaretRight />
+                      </>
+                    )}
+                    <a
+                      onMouseEnter={() => setIsShownC(true)}
+                      onMouseLeave={() => setIsShownC(false)}
+                      href="#Portfolio"
+                    >
+                      Contact Me
+                    </a>
                   </li>
                 </ul>
               ) : null}
             </div>
 
             <ul className="flex items-center">
-              <span id="updatebtn" className="bg-cyan-500 text- to-teal-500font-semibold mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 ">
+              <span
+                id="updatebtn"
+                className="bg-cyan-500 text- to-teal-500 font-semibold mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 text-white "
+              >
                 This website is being updated weekly 😀!
               </span>
 
               <li>
                 <BsFillMoonStarsFill
-                id="BsFillMoonStarsFill"
+                  id="BsFillMoonStarsFill"
                   onClick={() => setDarkMode(!darkMode)}
                   className="transition-all hover:scale-125 duration-[0.5s] cursor-pointer text-2xl"
                 />
@@ -145,7 +188,10 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 id="services" className="text-3xl py-1 dark:text-white ">
+            <h3
+              id="services"
+              className="text-3xl font-burtons py-1 dark:text-white "
+            >
               Services I offer
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -191,42 +237,47 @@ export default function Home() {
         <section className="py-10">
           <hr></hr>
           <div>
-            <h3 id="portfolio" className="text-3xl py-1 dark:text-white ">
+            <h3
+              id="portfolio"
+              className="text-3xl font-burtons py-1 dark:text-white "
+            >
               Portfolio
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I am at the beginning of my journey, but I have made several
-              projects
+              projects that I enjoyed
               <span className="text-teal-500"> which you can view below.</span>
             </p>
           </div>
+
           <div className="imgWrapper mt-5 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ml-16 ">
+            <div className=" basis-1/3 flex-1 ml-16 ">
               <Link
                 href="https://amazon-clone-react-marwane.netlify.app/"
                 target={"_blank"}
                 className="cursor-pointer"
               >
                 <Image
-                  className="col-start-1 ml-12 col-end-2 rounded-3xl object-cover transition-all hover:scale-110 duration-[0.5s] shadow-2xl"
-                  width={300}
-                  height={300}
+                  className=" pfitems col-start-1  col-end-2  object-cover transition-all hover:scale-110 duration-[0.5s] shadow-2xl"
+                  width={"100%"}
+                  height={"100%"}
                   layout="responsive"
                   src={amazonclone}
                   alt=""
                 />
               </Link>
             </div>
-            <div className="col-start-2 col-end-3 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
+            <div className="  col-start-2 col-end-3 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
               <Link
                 href="https://thebestweatherapp123.netlify.app/"
                 target={"_blank"}
                 className="cursor-pointer"
               >
                 <Image
-                  className="rounded-3xl object-cover w-[60%] block ml-auto mr-auto pt-16 mb-8 "
-                  width={500}
-                  height={500}
+                  id="weather"
+                  className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
+                  width={"100%"}
+                  height={"100%"}
                   layout="responsive"
                   src={weatherapp}
                   alt=""
@@ -234,14 +285,15 @@ export default function Home() {
               </Link>
             </div>
             <div className="col-start-2 col-end-3 flex items-center">
-              <div className="p-14 transition-all hover:scale-110 duration-[0.5s]">
+              <div className=" p-14 transition-all hover:scale-110 duration-[0.5s]">
                 <Link
                   href="https://fantastic-piano-app.netlify.app/"
                   target={"_blank"}
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-3xl object-cover"
+                    className="pfitems object-cover"
+                    id="piano"
                     width={300}
                     height={300}
                     layout="responsive"
@@ -258,7 +310,7 @@ export default function Home() {
                 className="cursor-pointer flex justify-center h-[100%] w-[100%]"
               >
                 <Image
-                  className="rounded-3xl mt-10 transition-all hover:scale-110 duration-[0.5s] h-72 shadow-md "
+                  className="pfitems mt-10 transition-all hover:scale-110 duration-[0.5s] h-72 shadow-md "
                   width={300}
                   height={300}
                   layout="responsive"
@@ -267,7 +319,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="col-start-1 col-end-2 flex items-center">
+            <div className=" col-start-1 col-end-2 flex items-center">
               <div className="p-14 transition-all hover:scale-110 duration-[0.5s] ">
                 <Link
                   href="https://caroussel-marwane.netlify.app"
@@ -275,7 +327,7 @@ export default function Home() {
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-3xl object-cover w-[80%] shadow-md "
+                    className=" pfitems object-cover w-[80%] shadow-md "
                     width={300}
                     height={300}
                     layout="responsive"
@@ -285,7 +337,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-start-2 col-end-3 flex items-center ">
+            <div className="  col-start-2 col-end-3 flex items-center ">
               <div className="p-14 transition-all hover:scale-110 duration-[0.5s] ">
                 <Link
                   href="https://hangman-marwane.netlify.app"
@@ -293,9 +345,9 @@ export default function Home() {
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-3xl object-cover w-[80%] shadow-md"
-                    width={200}
-                    height={200}
+                    className="pfitems object-cover w-[80%] shadow-md"
+                    width={260}
+                    height={260}
                     layout="responsive"
                     src={hangman}
                     alt=""
