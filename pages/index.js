@@ -127,7 +127,7 @@ export default function Home() {
             <ul className="flex items-center">
               <span
                 id="updatebtn"
-                className="bg-cyan-500 text- to-teal-500 font-semibold mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 text-white "
+                className="bg-cyan-500 text- to-teal-500 font-burtons mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 text-white "
               >
                 This website is being updated weekly 😀!
               </span>
@@ -198,13 +198,13 @@ export default function Home() {
               I am at the beginning of my journey,
               <span className="text-teal-500">
                 {" "}
-                but i am ready to take on a challenge.
+                but i am enthusiastic and ready to take on a challenge.
               </span>
             </p>
           </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <div className="imagecontainer">
+          <div className="lg:flex gap-10 ">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10  dark:bg-white flex-1">
+              <div className="imagecontainer ">
                 {" "}
                 <Image src={design} width={100} height={100} alt="" />{" "}
               </div>
@@ -216,7 +216,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">HTML</p>
               <p className="text-gray-800 py-1">React</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <div className="imagecontainer2">
                 {" "}
                 <Image src={code} width={100} height={100} alt="" />{" "}
@@ -284,12 +284,12 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="col-start-2 col-end-3 flex items-center">
-              <div className=" p-14 transition-all hover:scale-110 duration-[0.5s]">
+            <div className="col-start-2 col-end-3 flex items-center ">
+              <div className=" p-14 transition-all hover:scale-110 duration-[0.5s] ">
                 <Link
                   href="https://fantastic-piano-app.netlify.app/"
                   target={"_blank"}
-                  className="cursor-pointer flex justify-center"
+                  className="cursor-pointer flex justify-center "
                 >
                   <Image
                     className="pfitems object-cover"
