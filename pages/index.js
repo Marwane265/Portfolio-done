@@ -101,7 +101,7 @@ export default function Home() {
                     <a
                       onMouseEnter={() => setIsShownP(true)}
                       onMouseLeave={() => setIsShownP(false)}
-                      href="#Portfolio"
+                      href="#portfolio"
                     >
                       Projects
                     </a>
@@ -115,7 +115,7 @@ export default function Home() {
                     <a
                       onMouseEnter={() => setIsShownC(true)}
                       onMouseLeave={() => setIsShownC(false)}
-                      href="#Contact Me"
+                      href="#contact"
                     >
                       Contact Me
                     </a>
@@ -129,7 +129,7 @@ export default function Home() {
                 id="updatebtn"
                 className="bg-cyan-500 text- to-teal-500 font-burtons mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 text-white "
               >
-                This website is being updated weekly 😀!
+                This website is being updated weekly 😀 !
               </span>
 
               <li>
@@ -155,7 +155,7 @@ export default function Home() {
             />
           </div>
           <div className="text-center p-10 py-10">
-            <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl font-burtons">
+            <h2 className="text-5xl py-2 text-teal-500 md:text-6xl font-burtons">
               Lhoussni Marwane
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl font-burtons">
@@ -251,15 +251,16 @@ export default function Home() {
           </div>
 
           <div className="imgWrapper mt-5 lg:flex-row lg:flex-wrap">
-            <div className=" basis-1/3 flex-1 ml-16 ">
+            <div className="  col-start-1 col-end-2 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
               <Link
-                href="https://amazon-clone-react-marwane.netlify.app/"
+                href="https://amazon-clone-react-marwane.netlify.app"
                 target={"_blank"}
                 className="cursor-pointer"
               >
                 <Image
-                  className=" pfitems col-start-1  col-end-2  object-cover transition-all hover:scale-110 duration-[0.5s] shadow-2xl"
-                  width={"100%"}
+                  id="weather"
+                  className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
+                  w={1 / 2}
                   height={"100%"}
                   layout="responsive"
                   src={amazonclone}
@@ -276,7 +277,7 @@ export default function Home() {
                 <Image
                   id="weather"
                   className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
-                  width={"100%"}
+                  w={1 / 2}
                   height={"100%"}
                   layout="responsive"
                   src={weatherapp}
@@ -284,80 +285,77 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="col-start-2 col-end-3 flex items-center ">
-              <div className=" p-14 transition-all hover:scale-110 duration-[0.5s] ">
-                <Link
-                  href="https://fantastic-piano-app.netlify.app/"
-                  target={"_blank"}
-                  className="cursor-pointer flex justify-center "
-                >
-                  <Image
-                    className="pfitems object-cover"
-                    id="piano"
-                    width={300}
-                    height={300}
-                    layout="responsive"
-                    src={piano}
-                    alt=""
-                  />
-                </Link>
-              </div>
-            </div>
-            <div className="row-start-2 row-end-3 col-start-1 col-end-2 mt-5  w-[100%] lg:flex-row lg:flex-wrap  ">
+            <div className="  col-start-1 col-end-2 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
               <Link
-                href="https://quizz-react-appli.netlify.app/"
+                href="https://fantastic-piano-app.netlify.app"
                 target={"_blank"}
-                className="cursor-pointer flex justify-center h-[100%] w-[100%]"
+                className="cursor-pointer"
               >
                 <Image
-                  className="pfitems mt-10 transition-all hover:scale-110 duration-[0.5s] h-72 shadow-md "
-                  width={300}
-                  height={300}
+                  id="weather"
+                  className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
+                  w={1 / 2}
+                  height={"100%"}
+                  layout="responsive"
+                  src={piano}
+                  alt=""
+                />
+              </Link>
+            </div>
+            <div className="  col-start- col-end-3 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
+              <Link
+                href="https://quizz-react-appli.netlify.app"
+                target={"_blank"}
+                className="cursor-pointer"
+              >
+                <Image
+                  id="weather"
+                  className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
+                  w={1 / 2}
+                  height={"100%"}
                   layout="responsive"
                   src={Quizz}
                   alt=""
                 />
               </Link>
             </div>
-            <div className=" col-start-1 col-end-2 flex items-center">
-              <div className="p-14 transition-all hover:scale-110 duration-[0.5s] ">
-                <Link
-                  href="https://caroussel-marwane.netlify.app"
-                  target={"_blank"}
-                  className="cursor-pointer flex justify-center"
-                >
-                  <Image
-                    className=" pfitems object-cover w-[80%] shadow-md "
-                    width={300}
-                    height={300}
-                    layout="responsive"
-                    src={carousel}
-                    alt=""
-                  />
-                </Link>
-              </div>
+            <div className="  col-start-1 col-end-2 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
+              <Link
+                href="https://caroussel-marwane.netlify.app"
+                target={"_blank"}
+                className="cursor-pointer"
+              >
+                <Image
+                  id="weather"
+                  className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
+                  w={1 / 2}
+                  height={"100%"}
+                  layout="responsive"
+                  src={carousel}
+                  alt=""
+                />
+              </Link>
             </div>
-            <div className="  col-start-2 col-end-3 flex items-center ">
-              <div className="p-14 transition-all hover:scale-110 duration-[0.5s] ">
-                <Link
-                  href="https://hangman-marwane.netlify.app"
-                  target={"_blank"}
-                  className="cursor-pointer flex justify-center"
-                >
-                  <Image
-                    className="pfitems object-cover w-[80%] shadow-md"
-                    width={260}
-                    height={260}
-                    layout="responsive"
-                    src={hangman}
-                    alt=""
-                  />
-                </Link>
-              </div>
+            <div className="  col-start-2 col-end-3 basis-1/3 flex-1 transition-all hover:scale-110 duration-[0.5s] flex items-center justify-center">
+              <Link
+                href="https://hangman-marwane.netlify.app"
+                target={"_blank"}
+                className="cursor-pointer"
+              >
+                <Image
+                  id="weather"
+                  className="pfitems object-cover w-[60%] block ml-auto mr-auto mb-8 "
+                  w={1 / 2}
+                  height={"100%"}
+                  layout="responsive"
+                  src={hangman}
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
           <hr></hr>
-          <ContactMe id="contactMe" />
+          <ContactMe id="Contact Me" />
           <Link href="#home">
             <footer className="fixed left-1 bottom-1 cursor-pointer">
               <div

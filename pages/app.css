@@ -50,15 +50,15 @@
   cursor: pointer;
 }
 .pfitems {
-  border-radius: 24px;
-
+  border-radius: calc(2px + 2vw);
+  min-width: 150px;
   object-fit: cover;
 }
 #nav {
   height: 200px;
 }
 
-.tr { 
+.tr {
   color: black;
   transition: all 1s;
 }
