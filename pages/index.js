@@ -49,8 +49,8 @@ export default function Home() {
 
   const [darkMode, setDarkMode] = useState(false);
   const [isShownS, setIsShownS] = useState(false);
-  const [isShownC, setIsShownC] = useState(false);
   const [isShownP, setIsShownP] = useState(false);
+  const [isShownC, setIsShownC] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -115,7 +115,7 @@ export default function Home() {
                     <a
                       onMouseEnter={() => setIsShownC(true)}
                       onMouseLeave={() => setIsShownC(false)}
-                      href="#Portfolio"
+                      href="#Contact Me"
                     >
                       Contact Me
                     </a>
